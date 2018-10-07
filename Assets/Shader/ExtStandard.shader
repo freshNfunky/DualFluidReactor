@@ -69,6 +69,7 @@ Shader "Custom/ExtStandard"
 			#pragma exclude_renderers gles
 			
 			// -------------------------------------
+			#pragma surface surf Standard fullforwardshadows alpha
 					
 			#pragma shader_feature _NORMALMAP
 			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
@@ -91,7 +92,6 @@ Shader "Custom/ExtStandard"
              float2 uv_SpecMap;
              float2 uv_Mask;
             };
-
 
 			void Surf (Input IN, inout SurfaceOutputStandard o) 
 		     {
@@ -141,6 +141,8 @@ Shader "Custom/ExtStandard"
 			#pragma shader_feature _NORMALMAP
 			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
 			#pragma shader_feature _METALLICGLOSSMAP
+			#pragma fragment fragAdd
+			#include "UnityStandardCoreForward.cginc"
 			#pragma shader_feature ___ _DETAIL_MULX2
 			#pragma shader_feature _PARALLAXMAP
 			
@@ -148,8 +150,6 @@ Shader "Custom/ExtStandard"
 			#pragma multi_compile_fog
 
 			#pragma vertex vertAdd
-			#pragma fragment fragAdd
-			#include "UnityStandardCoreForward.cginc"
 
 			ENDCG
 		}

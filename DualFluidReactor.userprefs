@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shader/ExtStandard.shader">
+    <Files>
+      <File FileName="Assets/Shader/DoubleSidedSurfaceShader.shader" Line="7" Column="49" />
+      <File FileName="Assets/Shader/DoubleS_Shader.shader" Line="1" Column="9" />
+      <File FileName="Temp/Compiled-DoubleS_Shader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Shader/ExtStandard.shader" Line="157" Column="28" />
+      <File FileName="Temp/Compiled-ExtStandard.shader" Line="1" Column="76" />
+      <File FileName="Assets/CGIncludes/UnityStandardCoreForward.cginc" Line="12" Column="67" />
+      <File FileName="Assets/CGIncludes/UnityStandardConfig.cginc" Line="1" Column="1" />
+      <File FileName="Assets/CGIncludes/UnityStandardCore.cginc" Line="372" Column="21" />
+      <File FileName="Assets/CGIncludes/UnityCG.cginc" Line="1" Column="1" />
+      <File FileName="Assets/CGIncludes/UnityStandardInput.cginc" Line="23" Column="1" />
+      <File FileName="Assets/CGIncludes/UnityStandardMeta.cginc" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\SwitchVisOff.cs" />
+     <Compile Include="Assets\scripts\CameraSwitch.cs" />
+     <Compile Include="Assets\scripts\LevelReset.cs" />
      <None Include="Assets\DefaultResourcesExtra\Cubemaps\CubeCopy.shader" />
      <None Include="Assets\DefaultResources\Font.shader" />
      <None Include="Assets\DefaultResourcesExtra\Reflect-BumpSpec.shader" />
@@ -68,6 +70,7 @@
      <None Include="Assets\DefaultResourcesExtra\Nature\SoftOcclusion\TreeSoftOcclusionBarkRendertex.shader" />
      <None Include="Assets\DefaultResources\Internal-Colored.shader" />
      <None Include="Assets\DefaultResourcesExtra\UI\UI-Default.shader" />
+     <None Include="Assets\Shader\SurfaceShader.shader" />
      <None Include="Assets\CGIncludes\AutoLight.cginc" />
      <None Include="Assets\DefaultResourcesExtra\TerrainShaders\Splats\Standard-Base.shader" />
      <None Include="Assets\DefaultResourcesExtra\TerrainShaders\Splats\Specular-FirstPass.shader" />
@@ -98,11 +101,14 @@
      <None Include="Assets\DefaultResourcesExtra\Cubemaps\CubeBlurOdd.shader" />
      <None Include="Assets\DefaultResourcesExtra\UI\UI-Lit-Transparent.shader" />
      <None Include="Assets\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorLeaves.shader" />
+     <None Include="Assets\Double Sided Shaders\Double Sided Emissive Diffuse.shader" />
+     <None Include="Assets\Double Sided Shaders\Double Sided Transparent Diffuse Bump Cutout.shader" />
      <None Include="Assets\DefaultResources\Internal-GUITextureClip.shader" />
      <None Include="Assets\DefaultResourcesExtra\Normal-VertexLit.shader" />
      <None Include="Assets\DefaultResourcesExtra\Normal-Parallax.shader" />
      <None Include="Assets\DefaultResourcesExtra\Illumin-Diffuse.shader" />
      <None Include="Assets\DefaultResourcesExtra\Illumin-VertexLit.shader" />
+     <None Include="Assets\Shader\Ext_DS_EmissiveDiffuse.shader" />
      <None Include="Assets\DefaultResourcesExtra\Particle MultiplyDouble.shader" />
      <None Include="Assets\DefaultResourcesExtra\AlphaTest-Glossy.shader" />
      <None Include="Assets\DefaultResourcesExtra\Alpha-Glossy.shader" />
@@ -184,6 +190,7 @@
      <None Include="Assets\DefaultResourcesExtra\Nature\TreeCreator\TreeCreatorBarkRendertex.shader" />
      <None Include="Assets\DefaultResourcesExtra\Normal-Bumped.shader" />
      <None Include="Assets\DefaultResourcesExtra\AlphaTest-Diffuse.shader" />
+     <None Include="Assets\Double Sided Shaders\Double Sided Standard Diffuse Bump.shader" />
      <None Include="Assets\DefaultResourcesExtra\Mobile\Mobile-VertexLit.shader" />
      <None Include="Assets\DefaultResourcesExtra\Mobile\Mobile-Particle-Alpha-VertexLit.shader" />
      <None Include="Assets\DefaultResourcesExtra\Reflect-VertexLit.shader" />
@@ -197,6 +204,7 @@
      <None Include="Assets\DefaultResourcesExtra\UI\UI-Lit-Detail.shader" />
      <None Include="Assets\DefaultResourcesExtra\Lightmap-BumpSpec.shader" />
      <None Include="Assets\DefaultResourcesExtra\Nature\SpeedTreeBillboard.shader" />
+     <None Include="Assets\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
      <None Include="Assets\DefaultResources\Internal-BlitCopy.shader" />
      <None Include="Assets\CGIncludes\UnityStandardCore.cginc" />
      <None Include="Assets\DefaultResources\Internal-Flare.shader" />

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UnityEditor
 {
-internal class StandardShaderGUI : ShaderGUI
+internal class ExtStandardShaderGUI : ShaderGUI
 {
 	private enum WorkflowMode
 	{
@@ -24,6 +24,7 @@ internal class StandardShaderGUI : ShaderGUI
 	{
 		public static GUIStyle optionsButton = "PaneOptions";
 		public static GUIContent uvSetLabel = new GUIContent("UV Set");
+		public static GUIContent backfaceSetLabel = new GUIContent("BackfaceCulling");
 		public static GUIContent[] uvSetOptions = new GUIContent[] { new GUIContent("UV channel 0"), new GUIContent("UV channel 1") };
 
 		public static string emptyTootip = "";
@@ -71,6 +72,7 @@ internal class StandardShaderGUI : ShaderGUI
 	MaterialProperty detailNormalMapScale = null;
 	MaterialProperty detailNormalMap = null;
 	MaterialProperty uvSetSecondary = null;
+	MaterialProperty backFaceCull = null;
 
 	MaterialEditor m_MaterialEditor;
 	WorkflowMode m_WorkflowMode = WorkflowMode.Specular;
@@ -84,6 +86,7 @@ internal class StandardShaderGUI : ShaderGUI
 		albedoMap = FindProperty ("_MainTex", props);
 		albedoColor = FindProperty ("_Color", props);
 		alphaCutoff = FindProperty ("_Cutoff", props);
+		backFaceCull = FindProperty ("_Culling", props);
 		specularMap = FindProperty ("_SpecGlossMap", props, false);
 		specularColor = FindProperty ("_SpecColor", props, false);
 		metallicMap = FindProperty ("_MetallicGlossMap", props, false);
@@ -144,7 +147,8 @@ internal class StandardShaderGUI : ShaderGUI
 			DoSpecularMetallicArea();
 			m_MaterialEditor.TexturePropertySingleLine(Styles.normalMapText, bumpMap, bumpMap.textureValue != null ? bumpScale : null);
 			m_MaterialEditor.TexturePropertySingleLine(Styles.heightMapText, heightMap, heightMap.textureValue != null ? heigtMapScale : null);
-			m_MaterialEditor.TexturePropertySingleLine(Styles.occlusionText, occlusionMap, occlusionMap.textureValue != null ? occlusionStrength : null);
+			m_MaterialEditor.TexturePropertySingleLine (Styles.occlusionText, occlusionMap, occlusionMap.textureValue != null ? occlusionStrength : null);
+			m_MaterialEditor.ShaderProperty(backFaceCull, Styles.backfaceSetLabel.text);
 			DoEmissionArea(material);
 			m_MaterialEditor.TexturePropertySingleLine(Styles.detailMaskText, detailMask);
 			EditorGUI.BeginChangeCheck();

@@ -6,6 +6,7 @@ Shader "Custom/ExtStandard"
 		_MainTex("Albedo", 2D) = "white" {}
 		_ColorIn("Color Inside", Color) = (1,1,1,1)
 		_MainTexIn("Albedo Inside", 2D) = "white" {}
+		[Enum(OFF,0,ON,1)] _Culling ("Backface Culling", Float) = 0.0
 		
 		_Cutoff("Alpha Cutoff", Range(0.0, 1.0)) = 0.5
 
@@ -30,7 +31,6 @@ Shader "Custom/ExtStandard"
 		_DetailAlbedoMap("Detail Albedo x2", 2D) = "grey" {}
 		_DetailNormalMapScale("Scale", Float) = 1.0
 		_DetailNormalMap("Normal Map", 2D) = "bump" {}
-		_Culling ("Backface Culling", Float) = 0.0
 
 		[Enum(UV0,0,UV1,1)] _UVSec ("UV Set for secondary textures", Float) = 0
 
@@ -61,7 +61,7 @@ Shader "Custom/ExtStandard"
 
 			Blend [_SrcBlend] [_DstBlend]
 			ZWrite [_ZWrite]
-			Cull [_Cull]
+			Cull [_Culling]
 
 			CGPROGRAM
 			#pragma target 3.0
@@ -69,7 +69,6 @@ Shader "Custom/ExtStandard"
 			#pragma exclude_renderers gles
 			
 			// -------------------------------------
-			#pragma surface surf Standard fullforwardshadows alpha
 					
 			#pragma shader_feature _NORMALMAP
 			#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
@@ -84,37 +83,6 @@ Shader "Custom/ExtStandard"
 			#pragma vertex vertBase
 			#pragma fragment fragBase
 			#include "UnityStandardCoreForward.cginc"
- 
-	        struct Input {
-             float2 uv_MainTex;
-             float2 uv_Emission;
-             float2 uv_BumpMap;
-             float2 uv_SpecMap;
-             float2 uv_Mask;
-            };
-
-			void Surf (Input IN, inout SurfaceOutputStandard o) 
-		     {
-		
-		         if (dot(IN.viewDir, float3(0, 0, 1)) > 0)
-		         {
-		             // Front side is facing the camera, render as normal
-		             fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
-		             o.Albedo = c.rgb;
-		             o.Alpha = c.a;
-		         }
-		         else
-		         {
-		             // back side is facing the camera
-		             // will just render a plain color as the back of a paper page
-		             fixed4 c = tex2D(_MainTexIn, IN.uv_MainTexIN) * _ColorIn; 
-		             o.Albedo = c.rgb;
-		             o.Alpha = c.a;
-		             // but the normal is facing away so the color is always dim!!
-		             // Looking a way to flip the normal somehow...
-		 
-		         }
-		     }
 
 			ENDCG
 		}
@@ -128,7 +96,7 @@ Shader "Custom/ExtStandard"
 			Fog { Color (0,0,0,0) } // in additive pass fog should be black
 			ZWrite Off
 			ZTest LEqual
-			Cull [_Cull]
+			Cull [_Culling]
 
 			CGPROGRAM
 			#pragma target 3.0
@@ -160,7 +128,7 @@ Shader "Custom/ExtStandard"
 			Tags { "LightMode" = "ShadowCaster" }
 			
 			ZWrite On ZTest LEqual
-			Cull [_Cull]
+			Cull [_Culling]
 
 			CGPROGRAM
 			#pragma target 3.0
@@ -186,7 +154,7 @@ Shader "Custom/ExtStandard"
 		{
 			Name "DEFERRED"
 			Tags { "LightMode" = "Deferred" }
-			Cull [_Cull]
+			Cull [_Culling]
 
 			CGPROGRAM
 			#pragma target 3.0
@@ -253,7 +221,7 @@ Shader "Custom/ExtStandard"
 
 			Blend [_SrcBlend] [_DstBlend]
 			ZWrite [_ZWrite]
-			Cull [_Cull]
+			Cull [_Culling]
 
 			CGPROGRAM
 			#pragma target 2.0
@@ -286,7 +254,7 @@ Shader "Custom/ExtStandard"
 			Fog { Color (0,0,0,0) } // in additive pass fog should be black
 			ZWrite Off
 			ZTest LEqual
-			Cull [_Cull]
+			Cull [_Culling]
 			
 			CGPROGRAM
 			#pragma target 2.0
@@ -355,5 +323,5 @@ Shader "Custom/ExtStandard"
 
 
 	FallBack "VertexLit"
-	CustomEditor "StandardShaderGUI"
+	CustomEditor "ExtStandardShaderGUI"
 }

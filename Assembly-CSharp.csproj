@@ -45,7 +45,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
      <Compile Include="Assets\SwitchVisOff.cs" />
+     <Compile Include="Assets\scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\CameraSwitch.cs" />
      <Compile Include="Assets\scripts\LevelReset.cs" />
      <None Include="Assets\DefaultResourcesExtra\Cubemaps\CubeCopy.shader" />
@@ -166,8 +178,10 @@
      <None Include="Assets\DefaultResourcesExtra\Particle Blend.shader" />
      <None Include="Assets\CGIncludes\UnityUI.cginc" />
      <None Include="Assets\DefaultResourcesExtra\TerrainShaders\Details\WavingGrassBillboard.shader" />
+     <None Include="Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\CGIncludes\UnityBuiltin3xTreeLibrary.cginc" />
      <None Include="Assets\CGIncludes\UnityCG.cginc" />
+     <None Include="Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\DefaultResourcesExtra\Normal-DiffuseDetail.shader" />
      <None Include="Assets\DefaultResourcesExtra\UI\UI-Lit-Bumped.shader" />
      <None Include="Assets\DefaultResourcesExtra\Mobile\Mobile-Diffuse.shader" />

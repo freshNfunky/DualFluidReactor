@@ -164,8 +164,10 @@
      <None Include="Assets\DefaultResourcesExtra\Particle Blend.shader" />
      <None Include="Assets\CGIncludes\UnityUI.cginc" />
      <None Include="Assets\DefaultResourcesExtra\TerrainShaders\Details\WavingGrassBillboard.shader" />
+     <None Include="Assets\Fonts\OpenSans\License!.txt" />
      <None Include="Assets\CGIncludes\UnityBuiltin3xTreeLibrary.cginc" />
      <None Include="Assets\CGIncludes\UnityCG.cginc" />
+     <None Include="Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\DefaultResourcesExtra\Normal-DiffuseDetail.shader" />
      <None Include="Assets\DefaultResourcesExtra\UI\UI-Lit-Bumped.shader" />
      <None Include="Assets\DefaultResourcesExtra\Mobile\Mobile-Diffuse.shader" />

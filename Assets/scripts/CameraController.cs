@@ -36,4 +36,11 @@ public class CameraController : MonoBehaviour {
 			transform.eulerAngles = currentAngle;
 		}
 	}
+
+	public void updateCamera(int index){
+		
+		currentView = views[Mathf.Clamp(index,0,views.Length)];
+	
+	
+	}	
 }

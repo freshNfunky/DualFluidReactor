@@ -137,6 +137,7 @@
      <None Include="Assets\DefaultResourcesExtra\Alpha-Diffuse.shader" />
      <None Include="Assets\DefaultResourcesExtra\TerrainShaders\Splats\Specular-Base.shader" />
      <None Include="Assets\CGIncludes\Lighting.cginc" />
+     <None Include="Assets\Shader\StandardSurf.shader" />
      <None Include="Assets\DefaultResourcesExtra\Lightmap-VertexLit.shader" />
      <None Include="Assets\DefaultResourcesExtra\Illumin-ParallaxSpec.shader" />
      <None Include="Assets\DefaultResourcesExtra\Skybox-Cubed.shader" />
@@ -206,6 +207,7 @@
      <None Include="Assets\DefaultResourcesExtra\Nature\SpeedTreeBillboard.shader" />
      <None Include="Assets\Double Sided Shaders\Double Sided Transparent Diffuse Bump.shader" />
      <None Include="Assets\DefaultResources\Internal-BlitCopy.shader" />
+     <None Include="Assets\Shader\OutlineShader.shader" />
      <None Include="Assets\CGIncludes\UnityStandardCore.cginc" />
      <None Include="Assets\DefaultResources\Internal-Flare.shader" />
      <None Include="Assets\CGIncludes\UnityStandardCoreForward.cginc" />

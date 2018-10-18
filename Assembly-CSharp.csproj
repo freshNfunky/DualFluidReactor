@@ -56,13 +56,13 @@
      <Compile Include="Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
      <Compile Include="Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
-     <Compile Include="Assets\RayCaster.cs" />
-     <Compile Include="Assets\SwitchMaterial.cs" />
      <Compile Include="Assets\scripts\AnimationHandler.cs" />
      <Compile Include="Assets\scripts\CameraController.cs" />
      <Compile Include="Assets\scripts\CameraSwitch.cs" />
      <Compile Include="Assets\scripts\LevelReset.cs" />
+     <Compile Include="Assets\scripts\RayCaster.cs" />
      <Compile Include="Assets\scripts\SwitchCamera.cs" />
+     <Compile Include="Assets\scripts\SwitchMaterial.cs" />
      <Compile Include="Assets\scripts\SwitchVisOff.cs" />
      <None Include="Assets\DefaultResourcesExtra\Cubemaps\CubeCopy.shader" />
      <None Include="Assets\DefaultResources\Font.shader" />
